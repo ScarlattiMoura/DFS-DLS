@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .card {
+        @apply rounded-2xl border border-slate-200/70 dark:border-slate-700/60 bg-white/70 dark:bg-slate-900/60 backdrop-blur-md shadow-sm;
+    }
+}
+
+/* Aresta ativa "viajando" */
+@keyframes dash {
+    to {
+        stroke-dashoffset: -24;
+    }
+}
+
+.edge-active {
+    stroke-dasharray: 8 4;
+    animation: dash 0.8s linear infinite;
+}
